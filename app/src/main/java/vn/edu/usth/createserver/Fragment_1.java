@@ -1,5 +1,6 @@
 package vn.edu.usth.createserver;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,7 +15,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+
+import android.widget.Button;
+import android.widget.EditText;
+
+
 import vn.edu.usth.chatbox.R;
+import vn.edu.usth.listserver.IRC;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +30,8 @@ import vn.edu.usth.chatbox.R;
  */
 public class Fragment_1 extends Fragment {
 
+    private EditText usernameEditText;
+    private Button saveButton;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -94,6 +103,36 @@ public class Fragment_1 extends Fragment {
 
             }
         });
+
+
+
+
+        // Initialize views from the fragment layout
+        usernameEditText = view.findViewById(R.id.username);
+        saveButton = view.findViewById(R.id.savetouser);
+
+        // Set an OnClickListener for the Button
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Get the username from EditText
+                String username = usernameEditText.getText().toString();
+
+                if (!username.isEmpty()) {
+                    // Show a Toast message confirming the username was saved
+                    Toast.makeText(getActivity(), "Username saved: " + username, Toast.LENGTH_SHORT).show();
+
+                    // Navigate to the IRC activity
+                    Intent intent = new Intent(getActivity(), IRC.class);
+                    intent.putExtra("username", username);
+                    startActivity(intent);
+                } else {
+                    // Show an error if the username is empty
+                    Toast.makeText(getActivity(), "Please enter a username", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
 
     }
 }

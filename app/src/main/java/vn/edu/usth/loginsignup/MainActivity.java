@@ -11,8 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import vn.edu.usth.listserver.IRC;
 import vn.edu.usth.chatbox.R;
+import vn.edu.usth.listserver.IRC;
 
 
 public class MainActivity extends AppCompatActivity {

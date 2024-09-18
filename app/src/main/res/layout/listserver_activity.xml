@@ -8,6 +8,15 @@
     android:orientation="vertical"
     tools:context="vn.edu.usth.listserver.IRC">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="#5061BB"
+        app:title="IRC platform"
+        app:titleMarginStart="30dp"
+        android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"

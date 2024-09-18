@@ -7,11 +7,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="vn.edu.usth.listserver.ServerActivity">
-    
+
+    <fragment
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="vn.edu.usth.listserver.BackFragment"/>
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab"
             android:layout_width="match_parent"

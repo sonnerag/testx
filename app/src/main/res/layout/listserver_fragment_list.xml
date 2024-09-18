@@ -14,63 +14,6 @@
         android:background="#FFFFFF">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:background="#5061BB">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="IRC platform"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                android:layout_marginStart="15dp"/>
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginStart="20dp"
-                android:layout_weight="1"
-                android:contentDescription="Search"
-                android:gravity="center"
-                android:src="@drawable/search"
-                android:clickable="true"
-                android:focusable="true"
-                android:id="@+id/search_tag"/>
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginStart="-25dp"
-                android:layout_weight="1"
-                android:contentDescription="Login"
-                android:gravity="center"
-                android:src="@drawable/login"
-                android:clickable="true"
-                android:focusable="true"
-                android:id="@+id/login_tag"/>
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginStart="-30dp"
-                android:layout_weight="1"
-                android:contentDescription="Create new server"
-                android:gravity="center"
-                android:src="@drawable/add"
-                android:clickable="true"
-                android:focusable="true"
-                android:id="@+id/add_tag"/>
-
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/clickable"
             android:layout_width="match_parent"
             android:layout_height="100dp"

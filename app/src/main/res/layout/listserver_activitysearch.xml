@@ -15,11 +15,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="Enter" />
-
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@id/search"/>
+        <ListView
+             android:id="@+id/list"
+             android:layout_width="match_parent"
+             android:layout_height="fill_parent"
+             android:layout_below="@id/search" />
 
 </RelativeLayout>

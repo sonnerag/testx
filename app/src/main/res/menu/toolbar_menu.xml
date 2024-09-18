@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="search_bar"
+        android:id="@+id/search_bar"
+        android:icon="@drawable/search"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:title="logout_button"
+        android:id="@+id/logout_button"
+        android:icon="@drawable/logout"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:title="add_server"
+        android:id="@+id/add_server"
+        android:icon="@drawable/add"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:title="change_settings"
+        android:id="@+id/change_settings"
+        android:icon="@drawable/settings"
+        app:showAsAction="ifRoom"/>
+
+</menu>

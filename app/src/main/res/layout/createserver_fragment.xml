@@ -55,6 +55,7 @@
                 android:layout_marginRight="20dp">
 
                 <EditText
+                    android:id="@+id/username"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
@@ -337,6 +338,7 @@
                     android:layout_weight="1"/>
 
                 <Button
+                    android:id="@+id/savetouser"
                     android:layout_margin="10dp"
                     android:textAllCaps="false"
                     android:layout_width="150dp"

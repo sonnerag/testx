@@ -18,9 +18,9 @@ public class ServerActivity extends AppCompatActivity {
     private ViewPager viewpager;
     private PagerAdapter pageradapter;
     @Override
-    protected void onCreate (Bundle savedInstanceState){
+    protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.listserver_activityserver);
+        setContentView(R.layout.listserver_server);
         /*ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
