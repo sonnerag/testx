@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="network">
+
+        <item>network 1</item>
+        <item>network 2</item>
+        <item>network 3</item>
+        <item>network 4</item>
+    </string-array>
+</resources>
