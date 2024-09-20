@@ -32,7 +32,8 @@ android {
 }
 
 dependencies {
-
+    implementation("com.intuit.ssp:ssp-android:1.0.5")
+    implementation("com.intuit.sdp:sdp-android:1.0.5")
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)

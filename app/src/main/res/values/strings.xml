@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">chatbox</string>
+    <string name="app_name"></string>
     <!-- TODO: Remove or change this placeholder text -->
 
     <string name="facebook_app_id">YOUR_FACEBOOK_APP_ID</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

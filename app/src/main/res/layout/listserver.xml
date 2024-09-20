@@ -1,26 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/list_server"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     tools:context="vn.edu.usth.listserver.IRC">
 
     <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
         android:background="#5061BB"
         app:title="IRC platform"
-        app:titleMarginStart="30dp"
-        android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        app:titleMarginStart="16dp" />
 
     <fragment
+        android:id="@+id/frag"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/frag"
         android:name="vn.edu.usth.listserver.ListFragment"
-        tools:layout="@layout/listserver_fragment_list" />
+        tools:layout="@layout/listserver_fragment_listserver" />
 </LinearLayout>

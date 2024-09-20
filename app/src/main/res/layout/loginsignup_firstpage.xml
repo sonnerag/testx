@@ -52,13 +52,13 @@
 
             <TextView
                 android:id="@+id/Move"
-                android:layout_width="158dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:text="Sign Up"
+                android:gravity="center"
                 android:textColor="#7A7A7A"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_marginTop="5dp"
@@ -95,7 +95,8 @@
             </RelativeLayout>
             
             <Button
-               android:id="@+id/gm"
+
+                android:id="@+id/gm"
                 android:textAllCaps="false"
                 android:layout_marginTop="10dp"
                 android:layout_width="300dp"

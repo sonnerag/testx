@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
     tools:context="vn.edu.usth.createserver.MainActivity">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/back_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5061BB"
+        app:title="Create server"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -25,7 +40,16 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp">
 
+                <Spinner
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/server_edit_bg">
+                </Spinner>
+
                 <TextView
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#fff"
@@ -35,14 +59,6 @@
                     android:textColor="#566BEB"
                     android:textStyle="bold"
                     android:textSize="12sp" />
-
-
-                <Spinner
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/spinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp">
-                </Spinner>
 
             </RelativeLayout>
 
@@ -60,9 +76,12 @@
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
                     android:gravity="center_vertical"
-                    android:paddingLeft="20dp" />
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/server_edit_bg"/>
 
                 <TextView
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#fff"
@@ -94,9 +113,11 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:gravity="center_vertical"
-                        android:inputType="number"/>
+                        android:inputType="number"
+                        android:background="@drawable/server_edit_bg"/>
 
                     <TextView
+                        android:layout_marginLeft="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="#fff"
@@ -123,9 +144,10 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:gravity="center_vertical"
-                        android:text="ssd"
+                        android:text="ssl"
                         android:textAllCaps="true"
-                        android:textColor="#000"
+                        android:textColor="#566BEB"
+                        android:textStyle="bold"
                         android:textSize="20sp" />
 
                     <Switch
@@ -172,9 +194,11 @@
                             android:layout_height="50dp"
                             android:layout_marginTop="10dp"
                             android:gravity="center_vertical"
-                            android:paddingLeft="20dp" />
+                            android:paddingLeft="20dp"
+                            android:background="@drawable/server_edit_bg"/>
 
                         <TextView
+                            android:layout_marginLeft="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="#fff"
@@ -193,7 +217,15 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="20dp">
 
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/server_edit_bg"/>
+
                         <TextView
+                            android:layout_marginLeft="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="#fff"
@@ -203,13 +235,6 @@
                             android:textColor="#566BEB"
                             android:textStyle="bold"
                             android:textSize="12sp" />
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:layout_marginTop="10dp"
-                            android:gravity="center_vertical"/>
-
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -235,7 +260,7 @@
 
 
                 <RelativeLayout
-                    android:layout_marginTop="10dp"
+
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginLeft="20dp"
@@ -246,9 +271,11 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
                         android:gravity="center_vertical"
-                        android:paddingLeft="20dp" />
+                        android:paddingLeft="20dp"
+                        android:background="@drawable/server_edit_bg"/>/>
 
                     <TextView
+                        android:layout_marginLeft="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="#fff"
@@ -282,7 +309,6 @@
 
 
                 <RelativeLayout
-                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginLeft="20dp"
@@ -294,9 +320,11 @@
                         android:layout_marginTop="10dp"
                         android:gravity="center_vertical"
                         android:inputType="textPassword"
-                        android:paddingLeft="20dp" />
+                        android:paddingLeft="20dp"
+                        android:background="@drawable/server_edit_bg"/>/>
 
                     <TextView
+                        android:layout_marginLeft="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="#fff"
@@ -313,7 +341,8 @@
                         android:layout_height="30dp"
                         android:src="@drawable/eye"
                         android:layout_alignParentRight="true"
-                        android:layout_marginTop="20dp"/>
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"/>
 
                 </RelativeLayout>
             </LinearLayout>
@@ -328,7 +357,7 @@
                 <Button
                     android:layout_margin="10dp"
                 android:textAllCaps="false"
-                android:layout_width="150dp"
+                android:layout_width="130dp"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_edt"
                 android:text="Cancel"
@@ -341,7 +370,7 @@
                     android:id="@+id/savetouser"
                     android:layout_margin="10dp"
                     android:textAllCaps="false"
-                    android:layout_width="150dp"
+                    android:layout_width="130dp"
                     android:layout_height="50dp"
                     android:background="@drawable/bg_btn"
                     android:text="Done"
@@ -353,4 +382,4 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-</FrameLayout>
+</RelativeLayout>

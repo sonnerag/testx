@@ -7,8 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import vn.edu.usth.chatbox.ChatboxActivity;
 import vn.edu.usth.chatbox.R;
+import vn.edu.usth.loginsignup.MainActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,21 +60,28 @@ public class ListFragment extends Fragment {
         }
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.listserver_fragment_list, container, false);
-
+        View v = inflater.inflate(R.layout.listserver_fragment_listserver, container, false);
 
 
         v.findViewById(R.id.clickable).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getContext(),ServerActivity.class);
+            public void onClick(View v) {
+                // Create an intent to open the IRC activity
+                Intent intent = new Intent(getActivity(), ServerActivity.class);
+
                 startActivity(intent);
             }
         });
+
+
+
+
+
         return v;
         //LinearLayout linearLayout = new LinearLayout(getContext());
         //linearLayout.setOrientation(LinearLayout.VERTICAL);
@@ -86,5 +96,7 @@ public class ListFragment extends Fragment {
         linearLayout.addView(thursdayTextView);
         linearLayout.addView(thursdayImageView);**/
         //return linearLayout;
+
+
     }
 }

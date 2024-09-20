@@ -35,7 +35,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Create an intent to open the IRC activity
-                Intent intent = new Intent(MainActivity2.this, vn.edu.usth.createserver.MainActivity.class);
+                Intent intent = new Intent(MainActivity2.this, IRC.class);
                 startActivity(intent);
             }
         });
@@ -44,7 +44,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity2.this, vn.edu.usth.createserver.MainActivity.class);
+                Intent intent = new Intent(MainActivity2.this, IRC.class);
                 startActivity(intent);
             }
         });
@@ -56,7 +56,7 @@ public class MainActivity2 extends AppCompatActivity {
         moveTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity2.this, vn.edu.usth.createserver.MainActivity.class);
+                Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
                 startActivity(intent); // Start MainActivity3
             }
         });
@@ -73,9 +73,6 @@ public class MainActivity2 extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class); // Replace NextActivity with your target activity
         startActivity(intent);
     }
-
-
-
 
 
 }

@@ -1,11 +1,12 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/white"
-    android:padding="16dp">
+    android:background="#EFF5FA">
 
+<!--  Box chat  -->
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
@@ -14,24 +15,178 @@
         android:fillViewport="true"
         android:scrollbars="none">
 
-
-        <TextView
-            android:id="@+id/chatTextView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="Welcome to the chat!\n"
-            android:textColor="#000"
-            android:gravity="start"
-            android:padding="8dp"
-            android:background="@android:color/white" />
+            android:orientation="vertical"
+            android:id="@+id/messageContainer">
+
+
+            <LinearLayout
+                android:padding="8dp"
+                android:background="#BBDAFE"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/chat_text_size"
+                    android:text="MovieBuff:"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:gravity="start"
+                    android:paddingLeft="8dp"
+                    android:textColorHint="@android:color/holo_red_dark"/>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/chat_text_size"
+                    android:text="So, what movie are we watching tonight?"
+                    android:textColor="#000"
+                    android:gravity="start"
+                    android:paddingLeft="8dp"/>
+
+            </LinearLayout>
+
+            <!--    example conversation 2   -->
+            <LinearLayout
+                android:padding="8dp"
+                android:background="#D6E6FE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/chat_text_size"
+                    android:text="PopcornMaster:"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:gravity="start"
+                    android:paddingLeft="8dp"
+                    android:textColorHint="@android:color/holo_red_dark"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/chat_text_size"
+                    android:text="I vote for something scary! I’ve been itching to watch a horror film lately. Maybe something with a good plot twist?"
+                    android:textColor="#000"
+                    android:gravity="start"
+                    android:paddingLeft="8dp"/>
+
+            </LinearLayout>
+
+            <!--    example conversation 3   -->
+            <LinearLayout
+                android:padding="8dp"
+                android:background="#E0ECFD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/chat_text_size"
+                    android:text="SleepyCat: "
+                    android:textColor="#191970"
+                    android:gravity="start"
+                    android:paddingLeft="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/chat_text_size"
+                    android:text="Nope, nope, nope. I want a comedy, not nightmares"
+                    android:textColor="#000"
+                    android:gravity="start"
+                    android:paddingLeft="8dp"/>
+
+            </LinearLayout>
+
+            <!--    example conversation 4   -->
+            <LinearLayout
+                android:padding="8dp"
+                android:background="#F0F2FD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/chat_text_size"
+                    android:text="DJ_Phoenix:"
+                    android:textColor="#4B0082"
+                    android:gravity="start"
+                    android:paddingLeft="8dp"
+                    android:textColorHint="@android:color/holo_red_dark"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/chat_text_size"
+                    android:text="How about an action-comedy? That way, we get the excitement of action and the humor of comedy. It seems like the perfect balance for everyone’s tastes."
+                    android:textColor="#000"
+                    android:gravity="start"
+                    android:paddingLeft="8dp"/>
+
+            </LinearLayout>
+
+            <!--    example conversation 5   -->
+            <LinearLayout
+                android:padding="8dp"
+                android:background="#BBDAFE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/chat_text_size"
+                    android:text="MovieBuff: "
+                    android:textColor="@android:color/holo_red_dark"
+                    android:gravity="start"
+                    android:paddingLeft="8dp"
+                    android:textColorHint="@android:color/holo_red_dark"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/chat_text_size"
+                    android:text="Works for me. I’ll bring snacks!"
+                    android:textColor="#000"
+                    android:gravity="start"
+                    android:paddingLeft="8dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:padding="8dp"
+
+                android:id="@+id/chatTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/chat_text_size"
+                android:textColor="#000"
+                android:gravity="start"
+                android:paddingLeft="8dp"
+                android:paddingTop="5dp"/>
+        </LinearLayout>
+
     </ScrollView>
 
-
+<!--  input message here  -->
     <LinearLayout
+        android:background="#fff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="16dp">
 
         <EditText
             android:id="@+id/messageEditText"
@@ -42,16 +197,16 @@
             android:inputType="text"
             android:padding="8dp"
             android:textColor="@android:color/black"
-            android:background="@android:color/white"
             android:textColorHint="@android:color/darker_gray" />
 
+    <!--    send button    -->
         <Button
             android:id="@+id/sendButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Send"
-            android:textColor="@android:color/black"
-            android:background="@android:color/white" />
+            android:textColor="#fff"
+            android:background="@drawable/box_chat_btn"/>
     </LinearLayout>
 
 </LinearLayout>

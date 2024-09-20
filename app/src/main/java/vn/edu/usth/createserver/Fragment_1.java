@@ -1,13 +1,17 @@
 package vn.edu.usth.createserver;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -71,13 +75,28 @@ public class Fragment_1 extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.createserver_fragment, container, false);
+        View view = inflater.inflate(R.layout.createserver_fragment, container, false);
+        Toolbar toolbar = view.findViewById(R.id.back_bar);
+
+        // Load the icon and resize it
+        Drawable backIcon = getResources().getDrawable(R.drawable.back);
+        backIcon.setBounds(0, 0, 50, 50); // Set the size here (width, height)
+
+        // Set the resized icon
+        toolbar.setNavigationIcon(backIcon);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().finish();
+            }
+        });
+        return view;
     }
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
@@ -132,7 +151,6 @@ public class Fragment_1 extends Fragment {
                 }
             }
         });
-
 
     }
 }

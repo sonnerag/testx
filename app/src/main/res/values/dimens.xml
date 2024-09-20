@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default chat text size -->
+    <dimen name="chat_text_size">16sp</dimen>
+
+
+    <dimen name="chat_text_size_large">39sp</dimen>
+    <dimen name="chat_text_size_small">6sp</dimen>
+
+</resources>

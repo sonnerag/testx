@@ -7,18 +7,37 @@
     android:layout_height="match_parent"
     tools:context="vn.edu.usth.listserver.SearchActivity">
 
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/back_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5061BB"
+        android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+    <!-- SearchView -->
     <SearchView
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="60dp"
+
+
         android:layout_marginEnd="8dp"
-        android:text="Enter" />
-        <ListView
-             android:id="@+id/list"
-             android:layout_width="match_parent"
-             android:layout_height="fill_parent"
-             android:layout_below="@id/search" />
+        android:allowClickWhenDisabled="false"
+        android:backgroundTint="#000000"
+        android:clickable="true"
+        android:foregroundTint="#000000"
+        android:visibility="visible"
+        app:iconifiedByDefault="false" />
+
+    <!-- ListView -->
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@id/search"/>
 
 </RelativeLayout>

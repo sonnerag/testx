@@ -14,18 +14,20 @@ import androidx.appcompat.widget.Toolbar;
 
 import vn.edu.usth.chatbox.R;
 import vn.edu.usth.createserver.MainActivity;
+import vn.edu.usth.loginsignup.MainActivity2;
+import vn.edu.usth.loginsignup.MainActivity3;
 
 public class IRC extends AppCompatActivity {
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.listserver_activity);
-        /*ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });**/
+        setContentView(R.layout.listserver);
+//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+//            return insets;
+//        });
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -49,6 +51,8 @@ public class IRC extends AppCompatActivity {
         }
         if(id==R.id.logout_button){
             Toast.makeText(this,"Log out",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, MainActivity2.class);
+            startActivity(intent);;
         }
         if(id==R.id.add_server){
             Toast.makeText(this,"Create a new server",Toast.LENGTH_SHORT).show();
