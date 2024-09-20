@@ -9,15 +9,6 @@
     tools:context="vn.edu.usth.loginsignup.MainActivity"
     android:background="@drawable/up">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/back_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#5061BB"
-        android:theme="@style/Theme.AppCompat.NoActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="280dp"
@@ -59,6 +50,7 @@
                 android:background="@drawable/bg_edt"
                 android:inputType="textEmailAddress"
                 android:text="iadafboa"
+                android:textColor="@color/black"
                 android:gravity="center_vertical"
                 android:paddingLeft="20dp"/>
 

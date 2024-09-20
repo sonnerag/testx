@@ -41,12 +41,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Toolbar toolbar = findViewById(R.id.back_bar);
-        setSupportActionBar(toolbar);
-
-
-
-
     }
 
 //    @Override

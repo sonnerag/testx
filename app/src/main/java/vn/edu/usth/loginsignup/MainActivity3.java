@@ -1,8 +1,11 @@
 package vn.edu.usth.loginsignup;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -13,6 +16,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import vn.edu.usth.chatbox.R;
+import vn.edu.usth.listserver.IRC;
 
 public class MainActivity3 extends AppCompatActivity {
 
@@ -26,12 +30,16 @@ public class MainActivity3 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Toolbar toolbar = findViewById(R.id.back_bar);
-        setSupportActionBar(toolbar);
 
-
-
-
+        Button logafsign = findViewById(R.id.signalogin);
+        logafsign.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an intent to open the IRC activity
+                Intent intent = new Intent(MainActivity3.this, IRC.class);
+                startActivity(intent);
+            }
+        });
     }
 
 //    @Override
