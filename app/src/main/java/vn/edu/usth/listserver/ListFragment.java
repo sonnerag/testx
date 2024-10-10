@@ -11,8 +11,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import vn.edu.usth.chatbox.ChatboxActivity;
 import vn.edu.usth.chatbox.R;
-import vn.edu.usth.loginsignup.MainActivity;
-
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ListFragment#newInstance} factory method to

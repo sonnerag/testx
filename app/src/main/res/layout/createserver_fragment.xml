@@ -114,6 +114,7 @@
                         android:layout_marginTop="10dp"
                         android:gravity="center_vertical"
                         android:inputType="number"
+                        android:id="@+id/port_edit_text"
                         android:background="@drawable/server_edit_bg"/>
 
                     <TextView
@@ -152,6 +153,8 @@
 
                     <Switch
                         android:layout_width="wrap_content"
+
+                        android:id="@+id/ssl_switch"
                         android:layout_height="30dp"
                         android:layout_marginLeft="5dp"/>
                 </LinearLayout>
@@ -194,6 +197,7 @@
                             android:layout_height="50dp"
                             android:layout_marginTop="10dp"
                             android:gravity="center_vertical"
+                            android:id="@+id/nickname_edit_text"
                             android:paddingLeft="20dp"
                             android:background="@drawable/server_edit_bg"/>
 
@@ -221,6 +225,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
                             android:layout_marginTop="10dp"
+                            android:id="@+id/realname_edit_text"
                             android:gravity="center_vertical"
                             android:background="@drawable/server_edit_bg"/>
 
@@ -270,6 +275,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_marginTop="10dp"
+                        android:id="@+id/channel_edit_text"
                         android:gravity="center_vertical"
                         android:paddingLeft="20dp"
                         android:background="@drawable/server_edit_bg"/>/>
@@ -320,6 +326,7 @@
                         android:layout_marginTop="10dp"
                         android:gravity="center_vertical"
                         android:inputType="textPassword"
+                        android:id="@+id/nickserv_password_edit_text"
                         android:paddingLeft="20dp"
                         android:background="@drawable/server_edit_bg"/>/>
 
@@ -358,6 +365,7 @@
                     android:layout_margin="10dp"
                 android:textAllCaps="false"
                 android:layout_width="130dp"
+                    android:id="@+id/cancel_button"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_edt"
                 android:text="Cancel"

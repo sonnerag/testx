@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 
     <application
@@ -16,14 +17,13 @@
 
         <!-- Ensure no duplicates and check the exported status -->
         <activity android:name="vn.edu.usth.listserver.SearchActivity" android:exported="false" />
-        <activity android:name="vn.edu.usth.listserver.IRC" android:exported="true" />
+
         <activity android:name="vn.edu.usth.listserver.ServerActivity" android:exported="false" />
         <activity android:name=".ChatboxActivity" android:exported="true" />
         <activity android:name="vn.edu.usth.createserver.MainActivity" android:exported="false" />
-        <activity android:name="vn.edu.usth.loginsignup.MainActivity3" android:exported="true" />
 
         <activity
-            android:name="vn.edu.usth.loginsignup.MainActivity2"
+            android:name="vn.edu.usth.listserver.IRC"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -31,7 +31,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="vn.edu.usth.loginsignup.MainActivity" android:exported="true" />
     </application>
 
 </manifest>

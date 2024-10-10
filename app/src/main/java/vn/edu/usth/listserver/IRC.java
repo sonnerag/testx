@@ -14,8 +14,6 @@ import androidx.appcompat.widget.Toolbar;
 
 import vn.edu.usth.chatbox.R;
 import vn.edu.usth.createserver.MainActivity;
-import vn.edu.usth.loginsignup.MainActivity2;
-import vn.edu.usth.loginsignup.MainActivity3;
 
 public class IRC extends AppCompatActivity {
     @Override
@@ -49,11 +47,8 @@ public class IRC extends AppCompatActivity {
             Intent intent = new Intent(this,SearchActivity.class);
             startActivity(intent);
         }
-        if(id==R.id.logout_button){
-            Toast.makeText(this,"Log out",Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, MainActivity2.class);
-            startActivity(intent);;
-        }
+
+
         if(id==R.id.add_server){
             Toast.makeText(this,"Create a new server",Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, MainActivity.class);  //MainActivity in Createserver
