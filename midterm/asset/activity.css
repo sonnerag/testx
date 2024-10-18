@@ -1,0 +1,28 @@
+#main-content {
+  padding-top: 100px;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.header {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.bold_text {
+  font-weight: bold;
+}
+
+.link {
+  color: black;
+}
+
+.time {
+  font-weight: lighter;
+  font-size: small;
+}
+
+.activity-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}

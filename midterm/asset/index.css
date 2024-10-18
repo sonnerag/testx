@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* common */
+:root {
+  --main-clr: #fff;
+  --hover-clr: #ffefe5;
+  --accent-clr: #dc4c3e;
+  --sidebar-clr: #fcfaf8;
+  --line-clr: #42434a;
+  --user-submenu-hover: #eeeeee;
+  --z-modal: 1000;
+  --date-clr: #777;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  margin-top: 70px;
+  text-align: left;
+}
+
+.title .title__name {
+  font-weight: bold;
+  font-size: 2.4rem;
+  margin: 0.5rem 0;
+}
+
+title .title__date {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.year {
+  font-weight: 200;
+}
+
+/* Week Row Styling */
+/* Week Row Styling */
+.container .week-row {
+  z-index: -1;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--main-clr); /* Set the background to white */
+  padding: 10px 0; /* Add some padding for spacing */
+  border-radius: 5px; /* Add some border radius if needed */
+  margin-bottom: 20px; /* Space between week-row and task list */
+  position: relative;
+}
+
+.week-row::after {
+  content: ""; /* Creates a pseudo-element */
+  display: block; /* Makes the line a block element */
+  width: 100%; /* Full width of the parent element */
+  height: 2px; /* Thickness of the line */
+  background-color: var(--line-clr); /* Color of the line */
+  position: absolute; /* Position it relative to the parent */
+  bottom: -3px; /* Position it below the text */
+  left: 0; /* Align it to the left */
+}
+
+/* Styling for each day header */
+.day-header {
+  flex: 1;
+  text-align: center;
+  background-color: transparent; /* Change background to white */
+  padding: 10px;
+  border-radius: 0.5rem; /* Optional: rounded corners for day header */
+  font-size: 1.4rem;
+  color: var(--line-clr);
+  cursor: pointer;
+  /* Ensure the text color contrasts well with the white background */
+}
+
+.day-header span {
+  color: #777;
+}
+
+.day-header:hover {
+  background-color: var(--hover-clr);
+}
+
+/* Task List Styling */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.date {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  border-bottom: 3px solid #ccc;
+}
+
+.date-specific {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.date-specific .date-specific__1 {
+  margin: 0 0 5px;
+  font-size: 1.6rem;
+}
+
+.date-specific p {
+  margin: 0 0 10px;
+  color: #777;
+}
+
+.date ul {
+  margin-top: 1rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.date ul li {
+  z-index: -1;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.task-list ul li span {
+  padding: 0.5rem;
+}
+
+.task-list ul li p {
+  margin-top: 0.2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--date-clr);
+}
+.add-task-btn {
+  margin-top: 5px;
+  background-color: white; /* Make the button background white */
+  color: rgb(15, 15, 15); /* Text color red */
+  border: none; /* Remove default button border */
+  padding: 10px 20px; /* Add some padding to the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners for the button */
+  font-size: 1.6rem; /* Adjust the font size */
+  font-weight: 600;
+  display: inline-flex; /* Align text and icon horizontally */
+  align-items: center; /* Center align the text and icon */
+  gap: 10px; /* Space between text and plus symbol */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Style the plus symbol (inside the button) */
+.add-task-btn::before {
+  content: "+"; /* Plus symbol */
+  background-color: white; /* Background is always white */
+  color: red; /* Red color for the plus symbol */
+  width: 26px; /* Set a fixed width for the plus symbol */
+  height: 24px; /* Set a fixed height to make it square */
+  padding: 0; /* Remove padding */
+  text-align: center; /* Center the plus symbol */
+  line-height: 24px; /* Vertically center the plus symbol */
+  border-radius: 50%; /* Make the background circular */
+  font-weight: bold; /* Make the plus symbol bold */
+  font-size: 1.5em; /* Increase the size of the plus symbol */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  display: inline-block; /* Ensure the plus symbol behaves as a block */
+}
+
+.add-task-btn:hover::before {
+  background-color: red; /* Change the background color of the plus symbol to red on hover */
+  color: white; /* Change the color of the plus symbol to white on hover */
+}
+
+/* Hover effect for the button */
+.add-task-btn:hover {
+  color: red; /* Maintain red text color on hover */
+}
+
+/* Task Input Box Styling */
+#task-input-box {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: none;
+}
+
+#task-input-box input,
+#task-input-box textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+#submit-task-btn,
+#cancel-task-btn {
+  background-color: #edf0f2;
+  color: rgb(147, 14, 14);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#submit-task-btn:hover,
+#cancel-task-btn:hover {
+  background-color: #edf0f3;
+}
+
+/* Keep existing styles */
+
+.task-input-box {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  border: 1px solid #ddd;
+  display: none;
+}
+
+.task-input-box input,
+.task-input-box textarea {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.submit-task-btn,
+.cancel-task-btn {
+  margin-top: 10px;
+  background-color: #f4f7fa;
+  color: rgb(149, 12, 12);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-task-btn:hover,
+.cancel-task-btn:hover {
+  background-color: var(--hover-clr);
+}
+
+/* Styling for the toast */
+.toast {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  min-width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s, fadeOut 0.5s 4.5s;
+}
+
+.toast .fa-xmark {
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.toast.hide {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
