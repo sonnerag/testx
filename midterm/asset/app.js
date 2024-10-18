@@ -168,7 +168,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (checkbox.checked) {
         task.remove(); // Remove task when checked
         createToast("Task Done: " + task.innerText.trim()); //Ver2 create toast after remove task
-      }
+      
+       }
     });
 
     // Add drag-and-drop event listeners

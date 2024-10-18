@@ -63,13 +63,17 @@ title .title__date {
 
 .calendar {
   position: absolute;
-  width: 300px;
+  
+  width: 420px; /* Increased width */
   background-color: white;
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 15px; /* Increased padding for better spacing */
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Keep this above other elements */
 }
+
+
 
 .calendar.hidden {
   display: none;
@@ -101,58 +105,13 @@ title .title__date {
 }
 
 
-/* Week Row Styling */
-/* Week Row Styling */
-.container .week-row {
-  z-index: -1;
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--main-clr); /* Set the background to white */
-  padding: 10px 0; /* Add some padding for spacing */
-  border-radius: 5px; /* Add some border radius if needed */
-  margin-bottom: 20px; /* Space between week-row and task list */
-  position: relative;
-}
-
-.week-row::after {
-  content: ""; /* Creates a pseudo-element */
-  display: block; /* Makes the line a block element */
-  width: 100%; /* Full width of the parent element */
-  height: 2px; /* Thickness of the line */
-  background-color: var(--line-clr); /* Color of the line */
-  position: absolute; /* Position it relative to the parent */
-  bottom: -3px; /* Position it below the text */
-  left: 0; /* Align it to the left */
-}
-
-/* Styling for each day header */
-.day-header {
-  flex: 1;
-  text-align: center;
-  background-color: transparent; /* Change background to white */
-  padding: 10px;
-  border-radius: 0.5rem; /* Optional: rounded corners for day header */
-  font-size: 1.4rem;
-  color: var(--line-clr);
-  cursor: pointer;
-  /* Ensure the text color contrasts well with the white background */
-}
-
-.day-header span {
-  color: #777;
-}
-
-.day-header:hover {
-  background-color: var(--hover-clr);
-}
-
-/* Task List Styling */
 .task-list {
   display: flex;
+  margin-top: 40px;
   flex-direction: row;
   gap: 20px;
   overflow: auto;
+  align-items: flex-start;  
 }
 
 input[type="checkbox"] {
@@ -208,7 +167,7 @@ input[type="checkbox"] {
 }
 
 .task-list ul li span {
-  padding: 0.5rem;
+  padding: 10.5rem;
 }
 
 .task-list ul li p {
